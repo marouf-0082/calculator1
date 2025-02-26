@@ -49,6 +49,7 @@ for (let i = 0; i < buttonValues.length; i++) {
             let numA = Number(A);
             let numB = Number(B);
 
+            document.querySelector('#display').classList.add('styling');
             if (operator === '/') {
               display.value = numA/numB;
             } else if (operator === '*') {
@@ -69,6 +70,7 @@ for (let i = 0; i < buttonValues.length; i++) {
         if (value === 'AC') {
           clearAll();
           display.value = '';
+          document.querySelector('#display').classList.remove('styling');
         } else if (value === '+/-') {
             if (display.value != '' && display.value != '0') {
               if (display.value[0] === '-') {// remove -
